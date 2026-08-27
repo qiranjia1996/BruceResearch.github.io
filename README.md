@@ -6,10 +6,10 @@ no build step, no dependencies. Edit a file, push, it's live.
 ## Structure
 
 ```
-index.html            Home — bio, interests, skills, recent news
-experience.html       Education + experience timelines
+index.html            Home — photo, short about, interests (kept deliberately brief)
+experience.html       Education + experience timelines, skills, tools
 publications.html     Publications, presentations, software
-blog/index.html       Post listing
+blog/index.html       News list + post listing
 blog/hello-world.html Starter post — copy this to make a new one
 assets/css/style.css  All styling, including the 11 theme palettes
 assets/js/theme.js    Theme picker, mobile nav, skill-bar animation
@@ -21,8 +21,8 @@ Content lives directly in the HTML, marked with `<!-- EDIT: ... -->` comments.
 
 ## Common edits
 
-**Add your photo.** Save a square image as `assets/img/photo.jpg`. In `index.html`,
-delete the `<span>QJ</span>` line and uncomment the `<img>` line below it.
+**Replace the photo.** Overwrite `assets/img/photo.jpg` with another square image —
+`index.html` already points at it. Roughly 440×440 keeps it sharp on retina screens.
 
 **Add Google Scholar / ORCID.** In `index.html`, uncomment the two links at the end
 of the `<div class="links">` block and paste your URLs in.
@@ -31,11 +31,14 @@ of the `<div class="links">` block and paste your URLs in.
 title, authors, venue, and links. Wrap your own name in `<span class="me">Q. Jia</span>`
 so it stays bold.
 
-**Add a blog post.** Copy `blog/hello-world.html` to `blog/your-post.html`, rewrite it,
-then add one `<li>` to the list in `blog/index.html`.
+**Add a news item.** Add an `<li>` to the News list at the top of `blog/index.html`,
+newest first. The home page stays short on purpose — news does not go there.
 
-**Change a skill bar.** In `index.html`, each bar has `data-level="90"` and
-`aria-valuenow="90"` — change both numbers to match.
+**Add a blog post.** Copy `blog/hello-world.html` to `blog/your-post.html`, rewrite it,
+then add one `<li>` to the Posts list in `blog/index.html`.
+
+**Change a skill bar.** In `experience.html`, each bar has `data-level="90"` and
+`aria-valuenow="90"`, and `--level: 90%` — change all three to match.
 
 **Add a theme.** Copy a `[data-theme="..."]` block in `style.css`, rename it, adjust the
 color tokens, then add a matching `<li><button data-theme="yourname">` to the theme menu
