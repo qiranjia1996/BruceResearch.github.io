@@ -1,4 +1,4 @@
-# brucereearch.github.io
+# bruceresearch.github.io
 
 Personal academic site for Qiran Jia. Plain HTML, CSS, and one small JS file —
 no build step, no dependencies. Edit a file, push, it's live.
@@ -50,5 +50,5 @@ python3 -m http.server 8000
 
 ## Deploy
 
-Pushing to `main` publishes to https://brucereearch.github.io via GitHub Pages
+Pushing to `main` publishes to https://bruceresearch.github.io via GitHub Pages
 (source: `main` branch, root). `.nojekyll` stops GitHub from running Jekyll over the files.
