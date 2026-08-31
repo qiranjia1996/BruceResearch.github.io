@@ -1,2 +1,7 @@
 # Raw source image for the profile photo — the cropped version lives in assets/img/
 7a080760200a98b98bb49c8ae307f8bddc87aa4fe0fc30b67e03e61c77612868.png
+.DS_Store
+*.docx
+~$*
+profile-photo-source.png
+Qiran_Jia_Resume.pdf
