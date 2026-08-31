@@ -330,27 +330,13 @@ main { padding-bottom: 4rem; }
 }
 .pills li:hover { border-color: var(--accent); box-shadow: var(--glow); }
 
-/* --- Skill bars ----------------------------------------------------------- */
-.skills { display: grid; gap: 1.1rem; }
-.skill-head {
-  display: flex; justify-content: space-between; align-items: baseline;
-  font-size: .93rem; margin-bottom: .35rem;
+/* --- Skill groups ------------------------------------------------------------- */
+.skill-groups { display: grid; gap: 1.4rem; }
+.skill-group h3 {
+  font-size: .78rem; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--muted); font-family: var(--font-mono); font-weight: 600;
+  margin: 0 0 .55rem;
 }
-.skill-head .note { color: var(--muted); font-size: .78rem; font-family: var(--font-mono); }
-.track {
-  height: 8px; background: var(--surface); border: 1px solid var(--border);
-  border-radius: 999px; overflow: hidden;
-}
-.fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  box-shadow: var(--glow);
-  border-radius: 999px;
-  width: var(--level, 0);            /* no JS: bar is already at its value */
-  transition: width 900ms cubic-bezier(.22, 1, .36, 1);
-}
-.js .fill { width: 0; }              /* JS on: start empty, fill on scroll */
-@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
 
 /* --- Timeline ------------------------------------------------------------- */
 .timeline {

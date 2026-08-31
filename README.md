@@ -7,12 +7,12 @@ no build step, no dependencies. Edit a file, push, it's live.
 
 ```
 index.html            Home — photo, short about, interests (kept deliberately brief)
-experience.html       Education + experience timelines, skills, tools
+experience.html       Education + experience timelines, grouped skills
 publications.html     Publications, presentations, software
 blog/index.html       News list + post listing
 blog/hello-world.html Starter post — copy this to make a new one
 assets/css/style.css  All styling, including the 11 theme palettes
-assets/js/theme.js    Theme picker, mobile nav, skill-bar animation
+assets/js/theme.js    Theme picker, mobile nav, background particle field
 assets/Resume.pdf     Resume, linked from the home page
 assets/img/           Put photo.jpg here
 ```
@@ -37,8 +37,9 @@ newest first. The home page stays short on purpose — news does not go there.
 **Add a blog post.** Copy `blog/hello-world.html` to `blog/your-post.html`, rewrite it,
 then add one `<li>` to the Posts list in `blog/index.html`.
 
-**Change a skill bar.** In `experience.html`, each bar has `data-level="90"` and
-`aria-valuenow="90"`, and `--level: 90%` — change all three to match.
+**Change a skill.** In `experience.html`, the Skills section is grouped `.skill-group`
+blocks — each has an `<h3>` label and a `<ul class="pills">`. Add, remove, or rename
+the `<li>` chips; add a whole `.skill-group` for a new category.
 
 **Add a theme.** Copy a `[data-theme="..."]` block in `style.css`, rename it, adjust the
 color tokens, then add a matching `<li><button data-theme="yourname">` to the theme menu

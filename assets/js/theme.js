@@ -1,4 +1,4 @@
-/* Theme picker, mobile nav, and skill-bar animation.
+/* Theme picker and mobile nav.
    The no-flash bootstrap lives inline in each page's <head>; this file only
    handles interaction after the page has loaded. */
 (function () {
@@ -78,25 +78,6 @@
       var open = nav.classList.toggle("open");
       menuBtn.setAttribute("aria-expanded", String(open));
     });
-  }
-
-  /* --- Skill bars fill when scrolled into view ---------------------------- */
-  var fills = document.querySelectorAll(".fill[data-level]");
-  if (fills.length) {
-    var set = function (el) { el.style.width = el.dataset.level + "%"; };
-
-    if (!("IntersectionObserver" in window)) {
-      fills.forEach(set);
-    } else {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          set(entry.target);
-          io.unobserve(entry.target);
-        });
-      }, { threshold: 0.35 });
-      fills.forEach(function (el) { io.observe(el); });
-    }
   }
 
   /* --- Background particle field ------------------------------------------
